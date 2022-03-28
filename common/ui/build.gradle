@@ -4,6 +4,7 @@ apply plugin: 'kotlin-android'
 android {
     compileSdk 31
 }
+
 dependencies {
     implementation "androidx.core:core-ktx:+"
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
