@@ -12,9 +12,9 @@
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/buildSrc" />
-            <option value="$PROJECT_DIR$/common" />
-            <option value="$PROJECT_DIR$/common/models" />
-            <option value="$PROJECT_DIR$/common/ui" />
+            <option value="$PROJECT_DIR$/commons" />
+            <option value="$PROJECT_DIR$/commons/models" />
+            <option value="$PROJECT_DIR$/commons/ui" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

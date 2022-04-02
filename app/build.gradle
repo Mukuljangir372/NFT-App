@@ -4,16 +4,17 @@ plugins {
 }
 
 android {
-    compileSdk 31
+    compileSdk BuildAndroidConfig.COMPILE_SDK_VERSION
 
     defaultConfig {
-        applicationId "com.mukul.jan.nft"
-        minSdk 24
-        targetSdk 31
-        versionCode 1
-        versionName "1.0"
+        applicationId BuildAndroidConfig.APPLICATION_ID
+        minSdk BuildAndroidConfig.MIN_SDK_VERSION
+        targetSdk BuildAndroidConfig.TARGET_SDK_VERSION
+        versionCode BuildAndroidConfig.VERSION_CODE
+        versionName BuildAndroidConfig.VERSION_NAME
 
-        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner BuildAndroidConfig.ANDROID_JUNIT_RUNNER
+
         vectorDrawables {
             useSupportLibrary true
         }
@@ -48,17 +49,25 @@ android {
 
 dependencies {
 
-    implementation project(":common:models")
+    //MODULES --------------------------------------------------------------------------------------
+    implementation project(BuildModules.COMMONS_UI)
 
-    implementation 'androidx.core:core-ktx:1.7.0'
-    implementation "androidx.compose.ui:ui:$compose_version"
-    implementation "androidx.compose.material:material:$compose_version"
-    implementation "androidx.compose.ui:ui-tooling-preview:$compose_version"
-    implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.3.1'
-    implementation 'androidx.activity:activity-compose:1.3.1'
-    testImplementation 'junit:junit:4.13.2'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
-    androidTestImplementation "androidx.compose.ui:ui-test-junit4:$compose_version"
-    debugImplementation "androidx.compose.ui:ui-tooling:$compose_version"
+    //CORE -----------------------------------------------------------------------------------------
+    implementation(Libs.CORE_KTX)
+
+    //JETPACK COMPOSE ------------------------------------------------------------------------------
+    implementation(Libs.COMPOSE_UI)
+    implementation(Libs.MATERIAL_COMPOSE)
+    implementation(Libs.COMPOSE_PREVIEW)
+    implementation(Libs.LIFECYCLE_KTX)
+    implementation(Libs.COMPOSE_ACTIVITY)
+
+    //TESTS ------------------------------------------------------------------------------
+
+    testImplementation(TestLibs.JUNIT)
+    androidTestImplementation(TestLibs.JUNIT_EXT_ANDROID)
+    androidTestImplementation(TestLibs.EXPRESSO)
+    androidTestImplementation(TestLibs.COMPOSE_UI_TEST)
+    debugImplementation(TestLibs.COMPOSE_TOOLING)
+    
 }
