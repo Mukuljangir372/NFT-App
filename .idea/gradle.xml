@@ -19,6 +19,7 @@
             <option value="$PROJECT_DIR$/core/network" />
             <option value="$PROJECT_DIR$/core/ui" />
             <option value="$PROJECT_DIR$/features" />
+            <option value="$PROJECT_DIR$/features/collection_list" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
