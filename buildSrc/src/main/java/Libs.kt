@@ -17,6 +17,9 @@ object Libs {
     const val LIFECYCLE_KTX = "androidx.lifecycle:lifecycle-runtime-ktx:${v.LIFECYCLE}"
 
     //-----------------------------------------------------------------------------------------------------
+    //HILT
+    const val HILT = "com.google.dagger:hilt-android:${v.HILT}"
+    const val HILT_COMPILER = "com.google.dagger:hilt-android-compiler:${v.HILT}"
 
 
 }

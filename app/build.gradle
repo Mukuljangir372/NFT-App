@@ -1,6 +1,8 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
+    id 'kotlin-kapt'
+    id 'dagger.hilt.android.plugin'
 }
 
 android {
@@ -62,12 +64,26 @@ dependencies {
     implementation(Libs.LIFECYCLE_KTX)
     implementation(Libs.COMPOSE_ACTIVITY)
 
-    //TESTS ------------------------------------------------------------------------------
-
+    //TESTS ----------------------------------------------------------------------------------------
     testImplementation(TestLibs.JUNIT)
     androidTestImplementation(TestLibs.JUNIT_EXT_ANDROID)
     androidTestImplementation(TestLibs.EXPRESSO)
     androidTestImplementation(TestLibs.COMPOSE_UI_TEST)
     debugImplementation(TestLibs.COMPOSE_TOOLING)
-    
+
+    //HILT ----------------------------------------------------------------------------------------
+    implementation(Libs.HILT)
+    kapt(Libs.HILT_COMPILER)
+
 }
+
+kapt {
+    correctErrorTypes = true
+}
+
+
+
+
+
+
+
