@@ -35,6 +35,10 @@ dependencies {
     implementation(Libs.HILT)
     kapt(Libs.HILT_COMPILER)
 
+    //KTX ----------------------------------------------------------------------------------------
+    implementation(Libs.LIFECYCLE_KTX)
+    implementation(Libs.VIEWMODEL_KTX)
+
 }
 
 kapt {

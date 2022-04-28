@@ -13,13 +13,30 @@ object Libs {
     const val COMPOSE_ACTIVITY = "androidx.activity:activity-compose:${v.COMPOSE_ACTIVITY}"
 
     //-----------------------------------------------------------------------------------------------------
-    //LIFECYCLE
+    //KTX
     const val LIFECYCLE_KTX = "androidx.lifecycle:lifecycle-runtime-ktx:${v.LIFECYCLE}"
+    const val VIEWMODEL_KTX = "androidx.lifecycle:lifecycle-viewmodel-ktx:${v.LIFECYCLE}"
+
+    //-----------------------------------------------------------------------------------------------------
+    //KOTLIN COROUTINES
+    const val COROUTINES_CORE = "org.jetbrains.kotlinx:kotlinx-coroutines-core:${v.COROUTINES}"
+    const val COROUTINES_ANDROID = "org.jetbrains.kotlinx:kotlinx-coroutines-android:${v.COROUTINES}"
 
     //-----------------------------------------------------------------------------------------------------
     //HILT
     const val HILT = "com.google.dagger:hilt-android:${v.HILT}"
     const val HILT_COMPILER = "com.google.dagger:hilt-android-compiler:${v.HILT}"
 
+    //-----------------------------------------------------------------------------------------------------
+    //RETROFIT
+    const val RETROFIT = "com.squareup.retrofit2:retrofit:${v.RETROFIT}"
+    const val RETROFIT_CONVERTER_GSON = "com.squareup.retrofit2:converter-gson:${v.RETROFIT}"
+    const val OKHTTP_LOGGING = "com.squareup.okhttp3:logging-interceptor:${v.OKHTTP}"
+
 
 }
+
+
+
+
+
