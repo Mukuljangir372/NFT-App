@@ -21,6 +21,8 @@ android {
         vectorDrawables {
             useSupportLibrary true
         }
+
+        buildConfigField("String",BuildAndroidConfig.OPENSEA_API_KEY,OPENSEA_API_KEY)
     }
 
     buildTypes {
