@@ -25,6 +25,9 @@ android {
 
 dependencies {
 
+    //MODULES --------------------------------------------------------------------------------------
+    implementation(project(BuildModules.CORE_UI))
+
     //CORE --------------------------------------------------------------------------------------
     implementation(Libs.CORE_KTX)
     implementation(Libs.KOTLIN_STDLIB_JDK)
@@ -36,6 +39,7 @@ dependencies {
 
     //HILT ----------------------------------------------------------------------------------------
     implementation(Libs.HILT)
+    implementation(Libs.HILT_COMPOSE_NAV)
     kapt(Libs.HILT_COMPILER)
 
     //KTX ----------------------------------------------------------------------------------------

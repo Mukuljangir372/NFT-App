@@ -9,8 +9,10 @@ object Libs {
     //-----------------------------------------------------------------------------------------------------
     const val COMPOSE_UI = "androidx.compose.ui:ui:${v.COMPOSE}"
     const val MATERIAL_COMPOSE = "androidx.compose.material:material:${v.COMPOSE}"
+    const val COMPOSE_TOOLING = "androidx.compose.ui:ui-tooling:${v.COMPOSE}"
     const val COMPOSE_PREVIEW = "androidx.compose.ui:ui-tooling-preview:${v.COMPOSE}"
     const val COMPOSE_ACTIVITY = "androidx.activity:activity-compose:${v.COMPOSE_ACTIVITY}"
+    const val COMPOSE_NAVIGATION = "androidx.navigation:navigation-compose:${v.COMPOSE}"
 
     //-----------------------------------------------------------------------------------------------------
     //KTX
@@ -26,6 +28,7 @@ object Libs {
     //HILT
     const val HILT = "com.google.dagger:hilt-android:${v.HILT}"
     const val HILT_COMPILER = "com.google.dagger:hilt-android-compiler:${v.HILT}"
+    const val HILT_COMPOSE_NAV = "androidx.hilt:hilt-navigation-compose:${v.HILT_COMPOSE}"
 
     //-----------------------------------------------------------------------------------------------------
     //RETROFIT
