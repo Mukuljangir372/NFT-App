@@ -10,7 +10,7 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import com.mukul.jan.nft.ui.theme.NFTTheme
+import com.mukul.jan.ui.theme.NFTTheme
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint

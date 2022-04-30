@@ -8,6 +8,12 @@ android {
 }
 
 dependencies {
+    //CORE --------------------------------------------------------------------------------------
     implementation(Libs.CORE_KTX)
     implementation(Libs.KOTLIN_STDLIB_JDK)
+
+    //COMPOSE --------------------------------------------------------------------------------------
+    implementation(Libs.MATERIAL_COMPOSE)
+    implementation(Libs.COMPOSE_UI)
+    implementation(Libs.COMPOSE_PREVIEW)
 }

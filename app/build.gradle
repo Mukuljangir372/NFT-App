@@ -52,7 +52,7 @@ android {
 dependencies {
 
     //MODULES --------------------------------------------------------------------------------------
-    implementation project(BuildModules.CORE_NETWORK)
+    implementation project(BuildModules.CORE_UI)
     implementation project(BuildModules.COMMONS_UI)
 
     //CORE -----------------------------------------------------------------------------------------

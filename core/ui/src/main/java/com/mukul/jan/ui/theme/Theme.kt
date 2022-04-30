@@ -1,4 +1,4 @@
-package com.mukul.jan.nft.ui.theme
+package com.mukul.jan.ui.theme
 
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material.MaterialTheme
@@ -42,3 +42,8 @@ fun NFTTheme(darkTheme: Boolean = isSystemInDarkTheme(), content: @Composable ()
         content = content
     )
 }
+
+
+
+
+

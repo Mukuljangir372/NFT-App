@@ -1,4 +1,4 @@
-package com.mukul.jan.nft.ui.theme
+package com.mukul.jan.ui.theme
 
 import androidx.compose.ui.graphics.Color
 
