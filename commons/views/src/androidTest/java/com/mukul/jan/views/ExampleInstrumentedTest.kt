@@ -1,4 +1,4 @@
-package com.mukul.jan.nft
+package com.mukul.jan.views
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4
@@ -19,6 +19,6 @@ class ExampleInstrumentedTest {
     fun useAppContext() {
         // Context of the app under test.
         val appContext = InstrumentationRegistry.getInstrumentation().targetContext
-        assertEquals("com.mukul.jan.nft", appContext.packageName)
+        assertEquals("com.mukul.jan.views.test", appContext.packageName)
     }
 }

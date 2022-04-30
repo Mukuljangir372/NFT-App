@@ -1,4 +1,4 @@
-package com.mukul.jan.nft
+package com.mukul.jan.views
 
 import org.junit.Test
 

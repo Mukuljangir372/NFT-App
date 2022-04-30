@@ -31,7 +31,19 @@ object Libs {
     //RETROFIT
     const val RETROFIT = "com.squareup.retrofit2:retrofit:${v.RETROFIT}"
     const val RETROFIT_CONVERTER_GSON = "com.squareup.retrofit2:converter-gson:${v.RETROFIT}"
+
+    //-----------------------------------------------------------------------------------------------------
+    //OKHTTP
+    const val OKHTTP = "com.squareup.okhttp3:okhttp:${v.OKHTTP}"
     const val OKHTTP_LOGGING = "com.squareup.okhttp3:logging-interceptor:${v.OKHTTP}"
+
+    //-----------------------------------------------------------------------------------------------------
+    //GSON
+    const val GSON = "com.google.code.gson:gson:${v.GSON}"
+
+    //-----------------------------------------------------------------------------------------------------
+    //MULTI DEX SUPPORT
+    const val MULTIDEX = "com.android.support:multidex:${v.MULTIDEX}"
 
 
 }

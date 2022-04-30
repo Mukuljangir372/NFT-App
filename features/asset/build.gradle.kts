@@ -5,6 +5,10 @@ plugins {
 
 android {
     compileSdk = BuildAndroidConfig.COMPILE_SDK_VERSION
+
+    defaultConfig {
+        multiDexEnabled = true
+    }
 }
 
 dependencies {

@@ -32,9 +32,12 @@ object BuildDepVersions {
     const val HILT = "2.38.1"
 
     //-----------------------------------------------------------------------------------------------------
-    //RETROFIT & OKHTTP
+    //RETROFIT & OKHTTP & GSON
     const val RETROFIT = "2.9.0"
     const val OKHTTP = "4.9.3"
+    const val GSON = "2.9.0"
+
+    const val MULTIDEX = "1.0.3"
 
 
 

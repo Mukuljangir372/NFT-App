@@ -16,6 +16,7 @@ android {
         versionName BuildAndroidConfig.VERSION_NAME
 
         testInstrumentationRunner BuildAndroidConfig.ANDROID_JUNIT_RUNNER
+        multiDexEnabled true
 
         vectorDrawables {
             useSupportLibrary true
@@ -53,29 +54,28 @@ dependencies {
 
     //MODULES --------------------------------------------------------------------------------------
     implementation project(BuildModules.CORE_UI)
-    implementation project(BuildModules.COMMONS_UI)
 
     //CORE -----------------------------------------------------------------------------------------
     implementation(Libs.CORE_KTX)
 
     //JETPACK COMPOSE ------------------------------------------------------------------------------
-    implementation(Libs.COMPOSE_UI)
-    implementation(Libs.MATERIAL_COMPOSE)
-    implementation(Libs.COMPOSE_PREVIEW)
-    implementation(Libs.LIFECYCLE_KTX)
     implementation(Libs.COMPOSE_ACTIVITY)
-
-    //TESTS ----------------------------------------------------------------------------------------
-    testImplementation(TestLibs.JUNIT)
-    androidTestImplementation(TestLibs.JUNIT_EXT_ANDROID)
-    androidTestImplementation(TestLibs.EXPRESSO)
-    androidTestImplementation(TestLibs.COMPOSE_UI_TEST)
-    debugImplementation(TestLibs.COMPOSE_TOOLING)
 
     //HILT ----------------------------------------------------------------------------------------
     implementation(Libs.HILT)
     kapt(Libs.HILT_COMPILER)
 
+    //RETROFIT ----------------------------------------------------------------------------------------
+    implementation(Libs.RETROFIT)
+    implementation(Libs.RETROFIT_CONVERTER_GSON)
+
+    //OKHTTP ----------------------------------------------------------------------------------------
+    implementation(Libs.OKHTTP)
+    implementation(Libs.OKHTTP_LOGGING)
+
+    //GSON ----------------------------------------------------------------------------------------
+    implementation(Libs.GSON)
+    
 }
 
 kapt {
