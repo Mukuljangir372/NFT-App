@@ -12,5 +12,8 @@ object BuildAndroidConfig {
 
     const val ANDROID_JUNIT_RUNNER = "androidx.test.runner.AndroidJUnitRunner"
 
+    //secrets
     const val OPENSEA_API_KEY = "OPENSEA_API_KEY"
+    const val OPENSEA_BASE_URL = "OPENSEA_BASE_URL"
+
 }
