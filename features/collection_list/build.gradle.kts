@@ -36,7 +36,8 @@ dependencies {
     implementation(Libs.MATERIAL_COMPOSE)
     implementation(Libs.COMPOSE_UI)
     implementation(Libs.COMPOSE_PREVIEW)
-
+    debugImplementation(Libs.COMPOSE_TOOLING)
+    
     //HILT ----------------------------------------------------------------------------------------
     implementation(Libs.HILT)
     implementation(Libs.HILT_COMPOSE_NAV)

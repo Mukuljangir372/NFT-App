@@ -24,6 +24,7 @@
             <option value="$PROJECT_DIR$/features/asset_list" />
             <option value="$PROJECT_DIR$/features/collection_detail" />
             <option value="$PROJECT_DIR$/features/collection_list" />
+            <option value="$PROJECT_DIR$/learn" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

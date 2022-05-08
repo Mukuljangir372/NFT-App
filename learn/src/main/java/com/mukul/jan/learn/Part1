@@ -1,0 +1,67 @@
+
+//------------------------------------------------------------------------------------------------
+=> MutableSharedFlow
+example => val flow = MutableSharedFlow<*>(
+             reply = 1,
+             extraBufferCapacity = 1,
+             onBufferOverflow = BufferOverflow.DROP_OLDEST  //DROP_LATEST
+             )
+
+usages => Reply - number of past values will emit to new subscribers
+          extraBufferCapacity - increasing the capacity of Buffer for past values
+          Buffer - A container that stored past values
+          BufferCapacity - Define the size of values in Buffer
+          onBufferOverflow - When Buffer overflow (means, Buffer is full in memory)
+          BufferOverflow.DROP_OLDEST - In BufferOverflow, new subscribers will receive past oldest values
+
+example => val flow = MutableSharedFlow<*>().distinctUntilChanged()
+           OR
+            - getUsers() : Flow<List<User>>
+            - TABLE ROW - User(name = "mukul")
+           userDao.getUsers().distinctUntilChanged()
+
+usages => Lets assume, a row of user table has changed, it will re-trigger the query (getUsers())
+          and collector will collect the values. what if same value collected. For only collect
+          changed values, we use distinctUntilChanged(). It means, we don't collect duplicate values.
+
+          - flow<*>.collectLatest{ }
+          collectLatest - Lets assume, collector is collecting the values, meanwhile, values has changed,
+          then, collectLatest will cancelled and only collect those new values.
+
+example => val flowA = flow {
+                         emit(1)
+                         emit(2)
+                         emit(3)
+                         }.delayForEach(1000)
+
+          val flowB = flow { emit(A)
+                             emit(B)
+                             emit(C)
+                           }.delayForEach(2000)
+          - flowA.combine(flowB) { flowAValue, flowBValue ->
+                                  println("$flowAValue $flowBValue")
+                                  }
+
+usages => output = 1A,2A,3A,3B,3C
+          we use combine for combine multiple flows
+
+
+example =>  fun getMessageFromSocket() = flow {
+                 connectToWebSocket()
+                 try{
+                    emit(getMessages())
+                 }catch(e:Exception){
+                    emit(getMessageError())
+                  }
+             }.stateIn(
+             scope = coroutineScope,
+             started = SharingStarted.whileSubscribed(5000L),
+             initialValue = Socket.Loading
+             )
+
+usages => stateIn - It converts cold flow to hot flow and used for sharing state with initialValue.
+          go to docs for more details.
+
+
+
+//------------------------------------------------------------------------------------------------

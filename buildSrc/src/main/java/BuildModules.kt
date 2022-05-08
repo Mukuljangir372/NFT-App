@@ -9,4 +9,9 @@ object BuildModules {
 
     //:commons
     private const val COMMONS = ":commons"
+
+    //:features
+    private const val FEATURES = ":features"
+    const val COLLECTION_DETAIL = "$FEATURES:collection_detail"
+
 }

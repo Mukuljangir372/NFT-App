@@ -1,10 +1,9 @@
 package com.mukul.jan.collection_list
 
-import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material.Scaffold
-import androidx.compose.material.TopAppBar
+import androidx.compose.material.rememberScaffoldState
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.hilt.navigation.compose.hiltViewModel
 
 @Composable
@@ -23,12 +22,12 @@ internal fun CollectionList(
     viewModel: CollectionListViewModel,
     onOpenDetail: () -> Unit
 ) {
-    Scaffold(
-        modifier = Modifier.fillMaxSize(),
-        topBar = {
-                 TopAppBar {
+    val scaffoldState = rememberScaffoldState()
 
-                 }
+    Scaffold(
+        scaffoldState = scaffoldState,
+        topBar = {
+
         },
         content = {
 
@@ -36,6 +35,13 @@ internal fun CollectionList(
         )
 }
 
+@Preview()
+@Composable
+fun CollectionPreview(){
+    CollectionList(){
+
+    }
+}
 
 
 
