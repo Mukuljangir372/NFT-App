@@ -48,7 +48,6 @@ object Libs {
     //MULTI DEX SUPPORT
     const val MULTIDEX = "com.android.support:multidex:${v.MULTIDEX}"
 
-
 }
 
 

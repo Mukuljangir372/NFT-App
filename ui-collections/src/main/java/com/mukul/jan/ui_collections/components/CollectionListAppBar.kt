@@ -1,4 +1,4 @@
-package com.mukul.jan.ui_collections.ui
+package com.mukul.jan.ui_collections.components
 
 import androidx.compose.material.*
 import androidx.compose.material.icons.Icons
