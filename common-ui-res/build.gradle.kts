@@ -7,9 +7,9 @@ android {
     compileSdk = BuildAndroidConfig.COMPILE_SDK_VERSION
 
     defaultConfig {
+        minSdk = BuildAndroidConfig.MIN_SDK_VERSION
         multiDexEnabled = true
     }
-    namespace = "com.mukul.jan.common_ui_res"
 }
 
 dependencies {
