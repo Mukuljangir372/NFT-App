@@ -17,6 +17,7 @@ internal fun CollectionListAppBar(
         backgroundColor = MaterialTheme.colors.background,
         contentColor = MaterialTheme.colors.onSurface,
         title = {
+                Text(text = stringResource(id = R.string.dashboard))
         },
     )
 }
