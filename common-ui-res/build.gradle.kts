@@ -9,7 +9,7 @@ android {
     defaultConfig {
         multiDexEnabled = true
     }
-    namespace = "com.mukul.jan.data_android"
+    namespace = "com.mukul.jan.common_ui_res"
 }
 
 dependencies {

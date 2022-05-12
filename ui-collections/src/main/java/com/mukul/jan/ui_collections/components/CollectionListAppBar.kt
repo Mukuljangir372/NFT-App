@@ -10,7 +10,7 @@ import androidx.compose.ui.tooling.preview.Preview
 
 @Composable
 internal fun CollectionListAppBar(
-    onSavedClick: () -> Unit,
+    onSaveClick: () -> Unit,
     modifier: Modifier = Modifier,
 ) {
     TopAppBar(
@@ -21,17 +21,17 @@ internal fun CollectionListAppBar(
 
         },
         actions = {
-            CollectionAppBarActions(onSavedClick)
+            CollectionAppBarActions(onSaveClick)
         }
     )
 }
 
 @Composable
 internal fun CollectionAppBarActions(
-    onSavedClick: () -> Unit
+    onSaveClick: () -> Unit
 ) {
     IconButton(
-        onClick = onSavedClick
+        onClick = onSaveClick
     ) {
         Icon(imageVector = Icons.Default.FavoriteBorder, contentDescription = null)
     }

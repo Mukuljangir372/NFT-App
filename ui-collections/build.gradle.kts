@@ -20,6 +20,7 @@ android {
     buildFeatures {
         compose = true
     }
+    namespace = "com.mukul.jan.ui_collections"
 
 }
 

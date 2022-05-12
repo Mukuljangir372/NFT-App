@@ -9,6 +9,7 @@ android {
     defaultConfig {
         multiDexEnabled = true
     }
+    namespace = "com.mukul.jan.domain"
 }
 
 dependencies {
