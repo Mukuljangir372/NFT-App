@@ -18,6 +18,7 @@ object BuildDepVersions {
     const val COMPOSE = "1.1.1"
     const val COMPOSE_COMPILER = "1.5.10"
     const val COMPOSE_ACTIVITY = "1.3.1"
+    const val COMPOSE_NAV_ANIM = "0.24.8-beta"
 
     //-----------------------------------------------------------------------------------------------------
     //KTX

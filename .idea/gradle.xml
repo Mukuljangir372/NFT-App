@@ -22,8 +22,11 @@
             <option value="$PROJECT_DIR$/domain" />
             <option value="$PROJECT_DIR$/domain-android" />
             <option value="$PROJECT_DIR$/learn" />
+            <option value="$PROJECT_DIR$/ui-asset-detail" />
             <option value="$PROJECT_DIR$/ui-collection-detail" />
-            <option value="$PROJECT_DIR$/ui-collections" />
+            <option value="$PROJECT_DIR$/ui-collection-list" />
+            <option value="$PROJECT_DIR$/ui-saved-assets" />
+            <option value="$PROJECT_DIR$/ui-saved-collections" />
           </set>
         </option>
       </GradleProjectSettings>

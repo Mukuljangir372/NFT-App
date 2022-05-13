@@ -67,11 +67,14 @@ dependencies {
     implementation(Libs.COMPOSE_ACTIVITY)
     implementation(Libs.MATERIAL_COMPOSE)
     implementation(Libs.COMPOSE_UI)
+    implementation(Libs.COMPOSE_NAVIGATION)
     implementation(Libs.COMPOSE_PREVIEW)
+    implementation(Libs.COMPOSE_NAV_ANIM)
     debugImplementation(Libs.COMPOSE_TOOLING)
 
     //HILT ----------------------------------------------------------------------------------------
     implementation(Libs.HILT)
+    implementation(Libs.HILT_COMPOSE_NAV)
     kapt(Libs.HILT_COMPILER)
 
     //RETROFIT ----------------------------------------------------------------------------------------
@@ -84,7 +87,6 @@ dependencies {
 
     //GSON ----------------------------------------------------------------------------------------
     implementation(Libs.GSON)
-    
 }
 
 kapt {

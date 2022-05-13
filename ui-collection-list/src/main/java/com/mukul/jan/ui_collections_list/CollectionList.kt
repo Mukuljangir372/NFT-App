@@ -1,15 +1,17 @@
-package com.mukul.jan.ui_collections
+package com.mukul.jan.ui_collections_list
 
 import androidx.compose.material.Scaffold
 import androidx.compose.material.rememberScaffoldState
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.hilt.navigation.compose.hiltViewModel
+import com.mukul.jan.ui_collections_list.components.CollectionListAppBar
 
 @Composable
 fun CollectionList(
     onOpenDetail: () -> Unit
 ) {
+
     CollectionList(
         viewModel = hiltViewModel(),
         onOpenDetail = onOpenDetail
@@ -27,18 +29,18 @@ internal fun CollectionList(
     Scaffold(
         scaffoldState = scaffoldState,
         topBar = {
-
+            CollectionListAppBar()
         },
         content = {
 
         }
-        )
+    )
 }
 
 @Preview()
 @Composable
-fun CollectionPreview(){
-    CollectionList(){
+fun CollectionPreview() {
+    CollectionList() {
 
     }
 }

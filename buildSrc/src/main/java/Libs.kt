@@ -13,6 +13,7 @@ object Libs {
     const val COMPOSE_PREVIEW = "androidx.compose.ui:ui-tooling-preview:${v.COMPOSE}"
     const val COMPOSE_ACTIVITY = "androidx.activity:activity-compose:${v.COMPOSE_ACTIVITY}"
     const val COMPOSE_NAVIGATION = "androidx.navigation:navigation-compose:${v.COMPOSE}"
+    const val COMPOSE_NAV_ANIM = "com.google.accompanist:accompanist-navigation-animation:${v.COMPOSE_NAV_ANIM}"
 
     //-----------------------------------------------------------------------------------------------------
     //KTX
