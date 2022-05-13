@@ -6,6 +6,11 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.navigation
+import com.mukul.jan.ui_asset_detail.AssetDetail
+import com.mukul.jan.ui_collection_detail.CollectionDetail
+import com.mukul.jan.ui_collections_list.CollectionList
+import com.mukul.jan.ui_saved_assets.SavedAssets
+import com.mukul.jan.ui_saved_collections.SavedCollections
 
 internal sealed class Screen(val route: String) {
     object Collection : Screen("collection")
@@ -23,8 +28,14 @@ private sealed class NavScreen(
     object SavedAssets : NavScreen("savedAssets")
 
     object CollectionDetail : NavScreen("collectionDetail/{collectionId}") {
-        fun createRoute(root: Screen, id: String): String {
-            return "${root.route}/collectionDetail/{$id}"
+        fun createRoute(root: Screen, collectionId: String): String {
+            return "${root.route}/collectionDetail/{$collectionId}"
+        }
+    }
+
+    object AssetDetail : NavScreen("assetDetail/{assetId}") {
+        fun createRoute(root: Screen, assetId: String): String {
+            return "${root.route}/assetDetail/{$assetId}"
         }
     }
 
@@ -53,6 +64,7 @@ private fun NavGraphBuilder.addCollectionTopLevel(
         startDestination = NavScreen.Collection.createRoute(Screen.Collection)
     ) {
         addCollection(navController, Screen.Collection)
+        addCollectionDetail(navController, Screen.Collection)
     }
 }
 
@@ -63,7 +75,7 @@ private fun NavGraphBuilder.addSavedCollectionsTopLevel(
         route = Screen.SavedCollections.route,
         startDestination = NavScreen.SavedCollections.createRoute(Screen.SavedCollections)
     ) {
-
+        addSavedCollections(navController, Screen.SavedCollections)
     }
 }
 
@@ -74,7 +86,7 @@ private fun NavGraphBuilder.addSavedAssetsTopLevel(
         route = Screen.SavedAssets.route,
         startDestination = NavScreen.SavedAssets.createRoute(Screen.SavedAssets)
     ) {
-
+        addSavedAssets(navController, Screen.SavedAssets)
     }
 }
 
@@ -86,18 +98,48 @@ private fun NavGraphBuilder.addCollection(
     root: Screen
 ) {
     composable(route = NavScreen.Collection.createRoute(root)) {
+        CollectionList {
 
+        }
     }
 }
 
 private fun NavGraphBuilder.addCollectionDetail(
     navController: NavHostController,
     root: Screen
-){
-    composable(route = NavScreen.CollectionDetail.createRoute(root)){
-
+) {
+    composable(route = NavScreen.CollectionDetail.createRoute(root)) {
+        CollectionDetail()
     }
 }
+
+private fun NavGraphBuilder.addAssetDetail(
+    navController: NavHostController,
+    root: Screen
+) {
+    composable(route = NavScreen.AssetDetail.createRoute(root)) {
+        AssetDetail()
+    }
+}
+
+private fun NavGraphBuilder.addSavedCollections(
+    navController: NavHostController,
+    root: Screen,
+) {
+    composable(route = NavScreen.SavedCollections.createRoute(root)){
+        SavedCollections()
+    }
+}
+
+private fun NavGraphBuilder.addSavedAssets(
+    navController: NavHostController,
+    root: Screen,
+) {
+    composable(route = NavScreen.AssetDetail.createRoute(root)) {
+        SavedAssets()
+    }
+}
+
 
 
 

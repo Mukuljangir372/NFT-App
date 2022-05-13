@@ -1,7 +1,5 @@
 object BuildModules {
 
-    const val APP = ":app"
-
     //:core
     private const val CORE = ":core"
     const val CORE_NETWORK = "$CORE:network"
@@ -9,7 +7,13 @@ object BuildModules {
 
     //common
     const val COMMON_UI_RES = ":common-ui-res"
+    const val COMMON_UI_COMPONENTS = ":common-ui-components"
 
-
+    //ui
+    const val UI_COLLECTION_LIST = ":ui-collection-list"
+    const val UI_COLLECTION_DETAIL = ":ui-collection-detail"
+    const val UI_ASSET_DETAIL = ":ui-asset-detail"
+    const val UI_SAVED_COLLECTIONS = ":ui-saved-collections"
+    const val UI_SAVED_ASSETS = ":ui-saved-assets"
 
 }

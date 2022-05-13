@@ -60,6 +60,12 @@ dependencies {
     implementation project(BuildModules.CORE_UI)
     implementation project(BuildModules.CORE_NETWORK)
 
+    implementation project(BuildModules.UI_COLLECTION_LIST)
+    implementation project(BuildModules.UI_COLLECTION_DETAIL)
+    implementation project(BuildModules.UI_ASSET_DETAIL)
+    implementation project(BuildModules.UI_SAVED_COLLECTIONS)
+    implementation project(BuildModules.UI_SAVED_ASSETS)
+
     //CORE -----------------------------------------------------------------------------------------
     implementation(Libs.CORE_KTX)
 

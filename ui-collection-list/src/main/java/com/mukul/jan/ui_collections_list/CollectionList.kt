@@ -9,7 +9,7 @@ import com.mukul.jan.ui_collections_list.components.CollectionListAppBar
 
 @Composable
 fun CollectionList(
-    onOpenDetail: () -> Unit
+    onOpenDetail: (collectionId: Int) -> Unit
 ) {
 
     CollectionList(
@@ -22,7 +22,7 @@ fun CollectionList(
 @Composable
 internal fun CollectionList(
     viewModel: CollectionListViewModel,
-    onOpenDetail: () -> Unit
+    onOpenDetail: (collectionId: Int) -> Unit
 ) {
     val scaffoldState = rememberScaffoldState()
 
