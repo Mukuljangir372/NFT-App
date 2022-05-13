@@ -26,6 +26,6 @@ internal fun CollectionListAppBar(
 
 @Preview
 @Composable
-internal fun CollectionAppBarPreview() {
+private fun CollectionAppBarPreview() {
     CollectionListAppBar()
 }

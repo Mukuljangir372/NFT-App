@@ -1,7 +1,8 @@
-package com.mukul.jan.ui_saved_assets
+package com.mukul.jan.ui_search
 
 import androidx.compose.runtime.Composable
 
 @Composable
-fun SavedAssets() {
+fun SearchScreen() {
+
 }

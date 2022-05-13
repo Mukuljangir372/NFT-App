@@ -51,6 +51,10 @@ android {
             excludes += '/META-INF/{AL2.0,LGPL2.1}'
         }
     }
+    hilt {
+        enableExperimentalClasspathAggregation = true
+    }
+
     namespace 'com.mukul.jan.nft'
 }
 
@@ -63,8 +67,8 @@ dependencies {
     implementation project(BuildModules.UI_COLLECTION_LIST)
     implementation project(BuildModules.UI_COLLECTION_DETAIL)
     implementation project(BuildModules.UI_ASSET_DETAIL)
-    implementation project(BuildModules.UI_SAVED_COLLECTIONS)
-    implementation project(BuildModules.UI_SAVED_ASSETS)
+    implementation project(BuildModules.UI_SAVED)
+    implementation project(BuildModules.UI_SEARCH)
 
     //CORE -----------------------------------------------------------------------------------------
     implementation(Libs.CORE_KTX)

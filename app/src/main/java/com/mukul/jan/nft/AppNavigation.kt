@@ -9,23 +9,23 @@ import androidx.navigation.navigation
 import com.mukul.jan.ui_asset_detail.AssetDetail
 import com.mukul.jan.ui_collection_detail.CollectionDetail
 import com.mukul.jan.ui_collections_list.CollectionList
-import com.mukul.jan.ui_saved_assets.SavedAssets
-import com.mukul.jan.ui_saved_collections.SavedCollections
+import com.mukul.jan.ui_saved.SavedScreen
+import com.mukul.jan.ui_search.SearchScreen
 
 internal sealed class Screen(val route: String) {
     object Collection : Screen("collection")
-    object SavedCollections : Screen("savedCollections")
-    object SavedAssets : Screen("savedAssets")
+    object Saved : Screen("Saved")
+    object Search : Screen("Search")
 }
 
-private sealed class NavScreen(
+internal sealed class NavScreen(
     private val route: String
 ) {
     fun createRoute(root: Screen) = "${root.route}/$route"
 
     object Collection : NavScreen("collection")
-    object SavedCollections : NavScreen("savedCollections")
-    object SavedAssets : NavScreen("savedAssets")
+    object Saved : NavScreen("Saved")
+    object Search : NavScreen("Search")
 
     object CollectionDetail : NavScreen("collectionDetail/{collectionId}") {
         fun createRoute(root: Screen, collectionId: String): String {
@@ -51,8 +51,8 @@ internal fun AppNavigation(navController: NavHostController) {
         startDestination = Screen.Collection.route
     ) {
         addCollectionTopLevel(navController)
-        addSavedCollectionsTopLevel(navController)
-        addSavedAssetsTopLevel(navController)
+        addSavedTopLevel(navController)
+        addSearchTopLevel(navController)
     }
 }
 
@@ -68,28 +68,27 @@ private fun NavGraphBuilder.addCollectionTopLevel(
     }
 }
 
-private fun NavGraphBuilder.addSavedCollectionsTopLevel(
+private fun NavGraphBuilder.addSavedTopLevel(
     navController: NavHostController
 ) {
     navigation(
-        route = Screen.SavedCollections.route,
-        startDestination = NavScreen.SavedCollections.createRoute(Screen.SavedCollections)
+        route = Screen.Saved.route,
+        startDestination = NavScreen.Saved.createRoute(Screen.Saved)
     ) {
-        addSavedCollections(navController, Screen.SavedCollections)
+        addSaved(navController, Screen.Saved)
     }
 }
 
-private fun NavGraphBuilder.addSavedAssetsTopLevel(
+private fun NavGraphBuilder.addSearchTopLevel(
     navController: NavHostController
-) {
+){
     navigation(
-        route = Screen.SavedAssets.route,
-        startDestination = NavScreen.SavedAssets.createRoute(Screen.SavedAssets)
-    ) {
-        addSavedAssets(navController, Screen.SavedAssets)
+        route = Screen.Search.route,
+        startDestination = NavScreen.Search.createRoute(Screen.Search)
+    ){
+        addSearch(navController,Screen.Search)
     }
 }
-
 //-----------------------------------------------------------------------------------------------------
 //Screens
 
@@ -122,21 +121,21 @@ private fun NavGraphBuilder.addAssetDetail(
     }
 }
 
-private fun NavGraphBuilder.addSavedCollections(
+private fun NavGraphBuilder.addSaved(
     navController: NavHostController,
     root: Screen,
 ) {
-    composable(route = NavScreen.SavedCollections.createRoute(root)){
-        SavedCollections()
+    composable(route = NavScreen.Saved.createRoute(root)){
+        SavedScreen()
     }
 }
 
-private fun NavGraphBuilder.addSavedAssets(
+private fun NavGraphBuilder.addSearch(
     navController: NavHostController,
     root: Screen,
 ) {
-    composable(route = NavScreen.AssetDetail.createRoute(root)) {
-        SavedAssets()
+    composable(route = NavScreen.Search.createRoute(root)) {
+        SearchScreen()
     }
 }
 

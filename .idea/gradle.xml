@@ -25,8 +25,8 @@
             <option value="$PROJECT_DIR$/ui-asset-detail" />
             <option value="$PROJECT_DIR$/ui-collection-detail" />
             <option value="$PROJECT_DIR$/ui-collection-list" />
-            <option value="$PROJECT_DIR$/ui-saved-assets" />
-            <option value="$PROJECT_DIR$/ui-saved-collections" />
+            <option value="$PROJECT_DIR$/ui-saved" />
+            <option value="$PROJECT_DIR$/ui-search" />
           </set>
         </option>
       </GradleProjectSettings>
