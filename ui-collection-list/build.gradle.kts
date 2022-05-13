@@ -41,6 +41,9 @@ dependencies {
     implementation(Libs.COMPOSE_PREVIEW)
     debugImplementation(Libs.COMPOSE_TOOLING)
 
+    implementation(Libs.PAGING_3)
+    implementation(Libs.COIL)
+
     //HILT ----------------------------------------------------------------------------------------
     implementation(Libs.HILT)
     implementation(Libs.HILT_COMPOSE_NAV)
