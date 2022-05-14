@@ -3,7 +3,7 @@ package com.mukul.jan.nft.home
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import com.mukul.jan.ui.theme.NFTTheme
+import com.mukul.jan.nft.theme.NFTTheme
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint

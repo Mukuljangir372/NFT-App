@@ -1,4 +1,4 @@
-package com.mukul.jan.ui.theme
+package com.mukul.jan.nft.theme
 import androidx.compose.ui.graphics.Color
 
 val Blue200 = Color(0xFF68A0F8)

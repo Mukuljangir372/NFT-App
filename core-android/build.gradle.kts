@@ -5,7 +5,10 @@ plugins {
 
 android {
     compileSdk = BuildAndroidConfig.COMPILE_SDK_VERSION
-    namespace = "com.mukul.jan.network"
+
+    defaultConfig {
+        multiDexEnabled = true
+    }
 }
 
 dependencies {

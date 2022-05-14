@@ -1,4 +1,4 @@
-package com.mukul.jan.ui.theme
+package com.mukul.jan.nft.theme
 
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material.MaterialTheme

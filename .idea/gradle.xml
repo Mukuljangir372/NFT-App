@@ -15,8 +15,7 @@
             <option value="$PROJECT_DIR$/common-ui-components" />
             <option value="$PROJECT_DIR$/common-ui-res" />
             <option value="$PROJECT_DIR$/core" />
-            <option value="$PROJECT_DIR$/core/network" />
-            <option value="$PROJECT_DIR$/core/ui" />
+            <option value="$PROJECT_DIR$/core-android" />
             <option value="$PROJECT_DIR$/data" />
             <option value="$PROJECT_DIR$/data-android" />
             <option value="$PROJECT_DIR$/domain" />

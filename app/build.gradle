@@ -61,9 +61,6 @@ android {
 dependencies {
 
     //MODULES --------------------------------------------------------------------------------------
-    implementation project(BuildModules.CORE_UI)
-    implementation project(BuildModules.CORE_NETWORK)
-
     implementation project(BuildModules.UI_COLLECTION_LIST)
     implementation project(BuildModules.UI_COLLECTION_DETAIL)
     implementation project(BuildModules.UI_ASSET_DETAIL)

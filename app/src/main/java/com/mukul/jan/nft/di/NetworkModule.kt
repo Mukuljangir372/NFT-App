@@ -1,14 +1,20 @@
 package com.mukul.jan.nft.di
 
 import android.content.Context
-import com.mukul.jan.network.di.*
 import com.mukul.jan.nft.BuildConfig
+import com.mukul.jan.nft.util.NetworkUtils.APP_CACHE_DIR
+import com.mukul.jan.nft.util.NetworkUtils.OKHTTP_CACHE_SIZE
+import com.mukul.jan.nft.util.NetworkUtils.OPENSEA_KEY
+import com.mukul.jan.nft.util.NetworkUtils.OPENSEA_URL
+import com.mukul.jan.nft.util.NetworkUtils.X_API_KEY
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
-import okhttp3.*
+import okhttp3.Cache
+import okhttp3.Interceptor
+import okhttp3.OkHttpClient
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import java.io.File
