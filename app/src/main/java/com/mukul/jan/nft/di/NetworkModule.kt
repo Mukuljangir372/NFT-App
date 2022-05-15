@@ -1,11 +1,15 @@
 package com.mukul.jan.nft.di
 
 import android.content.Context
+import com.google.gson.Gson
+import com.google.gson.GsonBuilder
+import com.mukul.jan.core_android.network.DateDeserializer
 import com.mukul.jan.nft.BuildConfig
 import com.mukul.jan.nft.util.NetworkUtils.APP_CACHE_DIR
 import com.mukul.jan.nft.util.NetworkUtils.OKHTTP_CACHE_SIZE
 import com.mukul.jan.nft.util.NetworkUtils.OPENSEA_KEY
 import com.mukul.jan.nft.util.NetworkUtils.OPENSEA_URL
+import com.mukul.jan.nft.util.NetworkUtils.RETROFIT_GSON
 import com.mukul.jan.nft.util.NetworkUtils.X_API_KEY
 import dagger.Module
 import dagger.Provides
@@ -18,6 +22,7 @@ import okhttp3.OkHttpClient
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import java.io.File
+import java.util.*
 import javax.inject.Named
 import javax.inject.Singleton
 
@@ -38,16 +43,26 @@ object NetworkModule {
     @Named(OPENSEA_KEY)
     fun openseaKey(): String = BuildConfig.OPENSEA_API_KEY
 
+    @Provides
+    @Named(RETROFIT_GSON)
+    fun gson() : Gson {
+        return GsonBuilder()
+            .registerTypeAdapter(Date::class.java,DateDeserializer())
+            .setLenient()
+            .create()
+    }
+
     @Singleton
     @Provides
     fun provideRetrofit(
+        @Named(RETROFIT_GSON) gson: Gson,
         @Named(OPENSEA_URL) openseaUrl: String,
         okHttpClient: OkHttpClient
     ): Retrofit {
         return Retrofit.Builder()
             .baseUrl(openseaUrl)
             .client(okHttpClient)
-            .addConverterFactory(GsonConverterFactory.create())
+            .addConverterFactory(GsonConverterFactory.create(gson))
             .build()
     }
 

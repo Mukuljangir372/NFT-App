@@ -30,6 +30,10 @@ object Libs {
     const val COROUTINES_ANDROID = "org.jetbrains.kotlinx:kotlinx-coroutines-android:${v.COROUTINES}"
 
     //-----------------------------------------------------------------------------------------------------
+    //STORE (local + network cache)
+    const val STORE_DROPBOX = "com.dropbox.mobile.store:store4:${v.STORE_DROPBOX}"
+
+    //-----------------------------------------------------------------------------------------------------
     //HILT
     const val HILT = "com.google.dagger:hilt-android:${v.HILT}"
     const val HILT_COMPILER = "com.google.dagger:hilt-android-compiler:${v.HILT}"
@@ -53,7 +57,34 @@ object Libs {
     //MULTI DEX SUPPORT
     const val MULTIDEX = "com.android.support:multidex:${v.MULTIDEX}"
 
+    //-----------------------------------------------------------------------------------------------------
+    //ROOM DATABASE
+    const val ROOM = "androidx.room:room-runtime:${v.ROOM}"
+    const val ROOM_COMPILER = "androidx.room:room-compiler:${v.ROOM}"
+    const val ROOM_TESTING = "androidx.room:room-testing:${v.ROOM}"
+    const val ROOM_PAGING = "androidx.room:room-paging:${v.ROOM}"
+
+    //-----------------------------------------------------------------------------------------------------
+    //MAP STRUCT
+    const val MAP_STRUCT = "org.mapstruct:mapstruct:${v.MAP_STRUCT}"
+    const val MAP_STRUCT_PROCESS = "org.mapstruct:mapstruct-processor:${v.MAP_STRUCT}"
+
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

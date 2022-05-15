@@ -14,6 +14,7 @@ import com.mukul.jan.common_ui_res.R
 @Composable
 fun CollectionPreview() {
     CollectionList {}
+
 }
 
 @Composable

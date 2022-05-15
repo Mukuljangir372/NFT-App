@@ -1,6 +1,15 @@
 object BuildModules {
 
     //:core
+    const val CORE = ":core"
+    const val CORE_ANDROID = ":core-android"
+
+    //data
+    const val DATA = ":data"
+    const val DATA_ANDROID = ":data-android"
+
+    //domain
+    const val DOMAIN = ":domain"
 
     //common
     const val COMMON_UI_RES = ":common-ui-res"

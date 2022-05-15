@@ -61,6 +61,8 @@ android {
 dependencies {
 
     //MODULES --------------------------------------------------------------------------------------
+    implementation project(BuildModules.CORE)
+    implementation project(BuildModules.CORE_ANDROID)
     implementation project(BuildModules.UI_COLLECTION_LIST)
     implementation project(BuildModules.UI_COLLECTION_DETAIL)
     implementation project(BuildModules.UI_ASSET_DETAIL)

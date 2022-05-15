@@ -15,4 +15,11 @@ dependencies {
     //CORE --------------------------------------------------------------------------------------
     implementation(Libs.CORE_KTX)
     implementation(Libs.KOTLIN_STDLIB_JDK)
+
+    //COROUTINES --------------------------------------------------------------------------------
+    implementation(Libs.COROUTINES_ANDROID)
+
+    //RETROFIT --------------------------------------------------------------------------------
+    implementation(Libs.RETROFIT)
+
 }
