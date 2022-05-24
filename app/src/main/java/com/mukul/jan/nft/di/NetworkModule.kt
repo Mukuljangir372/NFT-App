@@ -19,6 +19,7 @@ import dagger.hilt.components.SingletonComponent
 import okhttp3.Cache
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
+import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import java.io.File
@@ -72,6 +73,9 @@ object NetworkModule {
         @Named(OPENSEA_KEY) openseaKey: String,
         @Named(APP_CACHE_DIR) cacheDir: File,
     ): OkHttpClient {
+        val httpLogging = HttpLoggingInterceptor()
+        httpLogging.setLevel(HttpLoggingInterceptor.Level.BODY)
+
         val cache = Cache(cacheDir, OKHTTP_CACHE_SIZE)
         return OkHttpClient.Builder()
             .addInterceptor(Interceptor { chain ->
@@ -81,6 +85,7 @@ object NetworkModule {
                     .build()
                 chain.proceed(newRequest)
             })
+            .addInterceptor(httpLogging)
             .cache(cache = cache)
             .build()
     }

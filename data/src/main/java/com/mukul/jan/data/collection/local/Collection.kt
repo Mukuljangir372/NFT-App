@@ -9,9 +9,9 @@ data class Collection(
     @PrimaryKey(autoGenerate = true)
     val id : Int,
     val page: Int = 0,
-    val slug: String = "",
-    val name: String = "",
-    val bannerUrl: String = "",
-    val createdDate: Date = Date(),
+    val slug: String? = "",
+    val name: String? = "",
+    val bannerUrl: String? = "",
+    val createdDate: Date? = Date(),
     val description: String? = ""
 )

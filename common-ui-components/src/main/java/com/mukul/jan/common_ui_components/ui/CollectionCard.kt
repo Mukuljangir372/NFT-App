@@ -70,7 +70,7 @@ fun CollectionCard(
                     Text(
                         style = MaterialTheme.typography.h6,
                         fontWeight = FontWeight.Medium,
-                        text = collection.name,
+                        text = collection.name ?: "",
                         maxLines = 1,
                         overflow = TextOverflow.Ellipsis
                     )

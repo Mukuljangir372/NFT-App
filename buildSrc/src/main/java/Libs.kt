@@ -24,8 +24,12 @@ object Libs {
 
     //-----------------------------------------------------------------------------------------------------
     //KTX
+    const val LIFECYCLE_LIVEDATA = "androidx.lifecycle:lifecycle-livedata-ktx:${v.LIFECYCLE}"
     const val LIFECYCLE_KTX = "androidx.lifecycle:lifecycle-runtime-ktx:${v.LIFECYCLE}"
     const val VIEWMODEL_KTX = "androidx.lifecycle:lifecycle-viewmodel-ktx:${v.LIFECYCLE}"
+    const val LIFECYCLE_COMMON = "androidx.lifecycle:lifecycle-common-java8:${v.LIFECYCLE}"
+    const val LIFECYCLE_EXTS = "androidx.lifecycle:lifecycle-extensions:${v.LIFECYCLE_EXTS}"
+    const val LIFECYCLE_COMPILER = "androidx.lifecycle:lifecycle-compiler:${v.LIFECYCLE}"
 
     //-----------------------------------------------------------------------------------------------------
     //KOTLIN COROUTINES

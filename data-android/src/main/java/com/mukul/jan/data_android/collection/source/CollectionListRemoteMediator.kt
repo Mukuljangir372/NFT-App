@@ -42,8 +42,9 @@ class CollectionListRemoteMediator(
                 }
             }
 
+            var key = loadKey ?: 0
             val collectionList = arrayListOf<Collection>()
-            val call = collectionListApi.getCollections(offset = loadKey, limit = pageLimit)
+            val call = collectionListApi.getCollections(offset = key, limit = pageLimit)
 
             call.body()?.collections?.let {
                 collectionList.addAll(mapper.networkCollectionListToCollectionList(it))
@@ -52,10 +53,9 @@ class CollectionListRemoteMediator(
                     if(loadType == LoadType.REFRESH){
                         collectionKeyDao.deleteKey()
                     }
-                    var newKey = loadKey ?: 0
-                    newKey += pageLimit
+                    key += pageLimit
 
-                    collectionKeyDao.insertKey(CollectionListKey(after = newKey))
+                    collectionKeyDao.insertKey(CollectionListKey(after = key))
                     collectionListDao.insertCollections(collectionList)
                 }
             }

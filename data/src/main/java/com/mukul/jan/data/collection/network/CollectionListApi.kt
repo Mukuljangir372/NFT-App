@@ -8,7 +8,7 @@ import retrofit2.http.Query
 interface CollectionListApi {
 
     @GET(COLLECTIONS)
-    fun getCollections(
+    suspend fun getCollections(
         @Query("offset") offset: Int?,
         @Query("limit") limit: Int?,
     ): Response<CollectionRes>

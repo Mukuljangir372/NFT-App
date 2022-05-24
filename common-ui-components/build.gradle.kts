@@ -46,6 +46,10 @@ dependencies {
     implementation(Libs.HILT_COMPOSE_NAV)
     kapt(Libs.HILT_COMPILER)
 
+    //KTX ----------------------------------------------------------------------------------------
+    implementation(Libs.LIFECYCLE_KTX)
+    implementation(Libs.VIEWMODEL_KTX)
+
 }
 
 kapt {

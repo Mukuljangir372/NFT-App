@@ -30,6 +30,7 @@ dependencies {
     implementation(project(BuildModules.COMMON_UI_RES))
     implementation(project(BuildModules.COMMON_UI_COMPONENTS))
     implementation(project(BuildModules.DATA_ANDROID))
+    implementation(project(BuildModules.DOMAIN))
 
     //CORE --------------------------------------------------------------------------------------
     implementation(Libs.CORE_KTX)

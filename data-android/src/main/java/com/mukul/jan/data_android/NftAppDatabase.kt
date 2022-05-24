@@ -10,7 +10,7 @@ import com.mukul.jan.data_android.utils.DatabaseConverters
 
 @Database(
     entities = [Collection::class, CollectionListKey::class],
-    version = 1
+    version = 2
 )
 @TypeConverters(DatabaseConverters::class)
 abstract class NftAppDatabase : RoomDatabase(), NftDatabase
