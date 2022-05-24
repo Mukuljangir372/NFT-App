@@ -10,17 +10,15 @@ android {
 
     defaultConfig {
         minSdk = BuildAndroidConfig.MIN_SDK_VERSION
+        multiDexEnabled = true
     }
-    
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
     }
-
     composeOptions {
         kotlinCompilerExtensionVersion = BuildDepVersions.COMPOSE
     }
-
     buildFeatures {
         compose = true
     }
@@ -30,6 +28,7 @@ dependencies {
 
     //MODULES --------------------------------------------------------------------------------------
     implementation(project(BuildModules.COMMON_UI_RES))
+    implementation(project(BuildModules.COMMON_UI_COMPONENTS))
     implementation(project(BuildModules.DATA_ANDROID))
 
     //CORE --------------------------------------------------------------------------------------
@@ -43,7 +42,6 @@ dependencies {
     debugImplementation(Libs.COMPOSE_TOOLING)
 
     implementation(Libs.PAGING_3)
-    implementation(Libs.COIL)
 
     //HILT ----------------------------------------------------------------------------------------
     implementation(Libs.HILT)

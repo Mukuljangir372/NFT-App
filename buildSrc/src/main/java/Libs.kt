@@ -14,10 +14,13 @@ object Libs {
     const val COMPOSE_ACTIVITY = "androidx.activity:activity-compose:${v.COMPOSE_ACTIVITY}"
     const val COMPOSE_NAVIGATION = "androidx.navigation:navigation-compose:${v.COMPOSE}"
     const val COMPOSE_NAV_ANIM = "com.google.accompanist:accompanist-navigation-animation:${v.COMPOSE_NAV_ANIM}"
-    //Paging
+
+    //PAGING
     const val PAGING_3 = "androidx.paging:paging-compose:${v.PAGING}"
-    //Coil (Image Loading)
-    const val COIL = "com.google.accompanist:accompanist-coil:${v.COIL}"
+
+    //COIL (IMAGE LOADING)
+    const val COIL_ACCOMPANIST = "com.google.accompanist:accompanist-coil:${v.COIL_ACCOMPANIST}"
+    const val COIL = "io.coil-kt:coil-compose:${v.COIL}"
 
     //-----------------------------------------------------------------------------------------------------
     //KTX
